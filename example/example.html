@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonrpcTest</title>
+</head>
+<body style="width: 100vw;height:100vh;display:flex;justify-content: center;align-items: center;">
+<div class="message-text" style="font-size: 20px"></div>
+<script src="../dist/iife/index.js"></script>
+<script type="application/javascript">
+    const messageTextEl = document.querySelector('.message-text');
+    const jsonRpc = new jsonrpcWsBrowserServer.JsonRpcServer('ws://127.0.0.1:8080/jsonrpc-client');
+    jsonRpc.onopen = () => {
+        messageTextEl.textContent = 'jsonrpc连接成功';
+    };
+    jsonRpc.onerror = (e) => {
+        messageTextEl.textContent = e;
+    };
+    jsonRpc.open().catch();
+    let err = jsonRpc.register('show-date', function (userId, date) {
+        this.assert(date, 'date参数不能为空');
+        this.assertEqual(userId, '001', '用户id不正确');
+        messageTextEl.textContent = date;
+        return 'ok';
+    });
+    if (err) {
+        console.error(err);
+    }
+</script>
+</body>
+</html>

@@ -25,7 +25,7 @@ import {JsonRpcServer} from './dist/index.mjs';
 
 ## Getting started  ``example.html``
 
-[后端示例地址](https://github.com/vyks520/jsonrpc-ws-browser-client/example/example.go)
+[后端示例地址](https://github.com/vyks520/jsonrpc-ws-browser-client/blob/main/example/example.go)
 
 ```html
 <!DOCTYPE html>

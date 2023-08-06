@@ -28,7 +28,7 @@ jobs:
         npm install
         npm install rollup -g
         rollup --config
-        ## npm publish
+        npm publish
       
       env:
         NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

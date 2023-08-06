@@ -13,14 +13,13 @@ jsonrpc-ws-browser-server是一个以浏览器为JSON-RPC 2.0服务端，用于�
 
 使用CDN(浏览器中)，下载dist/iife/index.js到项目中使用
 
-```
-<script src="../dist/iife/index.js"></script>
+```html
+<script src="https://cdn.jsdelivr.net/npm/jsonrpc-ws-browser-server/dist/iife/index.js"></script>
 ```
 
-没有制作NPM包，需要将复制到项目中使用
-
-```javascript
-import {JsonRpcServer} from './dist/index.mjs';
+使用NPM
+```shell
+npm i jsonrpc-ws-browser-server
 ```
 
 ## Getting started  ``example.html``

@@ -1,6 +1,6 @@
 {
   "name": "jsonrpc-ws-browser-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "rollup --config"
   },
@@ -11,6 +11,9 @@
   },
   "type": "module",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.22.9",
